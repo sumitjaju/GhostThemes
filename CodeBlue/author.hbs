@@ -1,0 +1,57 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+
+{{! Everything inside the #author tags pulls data from the author }}
+{{#author}}
+    <header class="main-header author-head {{#if cover}}" style="background-image: url({{cover}}){{else}}no-cover{{/if}}">
+        <nav class="main-nav overlay clearfix">
+            {{#if @blog.logo}}
+            <a class="back-button" href="{{@blog.url}}">
+                <img src="{{@blog.logo}}" width="32px" height="32px"/> 
+            </a>
+            {{/if}}
+            <a class="menu-ham ion-android-menu" href="#"></a>
+            <ul id="dropdown" >
+                <a class="ion-close-round" href="#"></a>    
+                <li>
+                    <a href="{{@blog.url}}">{{@blog.description}}</a>
+                    <span class="logotize">coderange</span>
+                </li>
+                <li><a href="https://twitter.com/jsumeet" target="_blank">@jsumeet</a></li>
+                <li><a href="{{@blog.url}}" >coderange.io</a></li>
+                <li><a href="mailto:hi@coderange.io?subject=hi there!">say&nbsp;hi</a></li>
+                <li><a href="/feed" target="_blank">rss feed</a></li>
+                <li><hr class="overlord_nav"></li>
+                <li><a href="{{@blog.url}}/aboutus/">about coderange</a></li>
+            </ul>
+            <a class="page-title-post" href="{{@blog.url}}">
+                {{@blog.title}}
+            </a>
+        </nav>
+    </header>
+
+    <section class="author-profile inner">
+        {{#if image}}
+        <figure class="author-image">
+            <div class="img" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
+        </figure>
+        {{/if}}
+        <h1 class="author-title">{{name}}</h1>
+        <h2 class="author-bio">{{bio}}</h2>
+        <div class="author-meta">
+            {{#if location}}<span class="author-location ion-location">{{location}}</span>{{/if}}
+            {{#if website}}<span class="author-link ion-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+            <span class="author-stats"><i class="ion-stats-bars"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+        </div>
+    </section>
+{{/author}}
+
+{{! The main content area on the homepage }}
+<main class="content" role="main">
+
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
+
+</main>

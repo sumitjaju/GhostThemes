@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "images/favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Josefin+Sans:100italic,100,300italic,300,400italic,400,600italic,600,700italic,700" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,700"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round:400"/>
+    <link href="{{asset "css/ionicons.css"}}" rel="stylesheet">
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+    
+    <footer id="blog_foot" class="cf">
+      <ul id="foot_links">
+        <li><a href="/feed" target="_blank">rss feed</a></li>
+        <li><a href="mailto:hi@coderange.io?subject=hi there!">say hello</a></li>
+        <li><a href="{{@blog.url}}/aboutus/">about/coderange</a></li>
+      </ul>
+      <a href="{{@blog.url}}">
+          {{#if @blog.logo}}
+              <figure id="user_foot">
+                    <img src="{{@blog.logo}}" width="32px" height="32px"/>
+              </figure>
+          {{/if}}
+          <h5>{{@blog.title}}</h5>
+      </a>                
+    </footer>
+    
+    <footer class="site-footer clearfix">
+        <a class="subscribe ion-social-rss" href="{{@blog.url}}/rss/" target="_blank"><span class="tooltip">Subscribe!</span></a>
+        <section class="copyright">
+            <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
+        </section>
+    </footer>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for CodeBlue }}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="https://platform.twitter.com/widgets.js"></script>
+</body>
+</html>

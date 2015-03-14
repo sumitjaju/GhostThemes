@@ -1,0 +1,120 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+        {{#if @blog.logo}}
+            <a class="back-button" href="{{@blog.url}}">
+                <img src="{{@blog.logo}}" width="32px" height="32px"/>
+            </a>
+        {{/if}}
+        <a class="menu-ham ion-android-menu"></a>
+        <ul id="dropdown" >
+            <a class="ion-close-round" href="#"></a>    
+            <li>
+                <a href="{{@blog.url}}">{{@blog.description}}</a>
+                <span class="logotize">{{@blog.title}}</span>
+            </li>
+            <li><a href="https://twitter.com/jsumeet" target="_blank">@jsumeet</a></li>
+            <li><a href="{{@blog.url}}" >coderange.io</a></li>
+            <li><a href="mailto:hi@coderange.io?subject=hi there!">say&nbsp;hi</a></li>
+            <li><a href="/feed" target="_blank">rss feed</a></li>
+            <li><hr class="overlord_nav"></li>
+            <li><a href="{{@blog.url}}/aboutus/">about coderange</a></li>
+        </ul>
+        <a class="page-title-post" href="{{@blog.url}}">
+            {{@blog.title}}
+        </a>    
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="{{post_class}}">
+
+        <header class="post-header">
+            <section class="post-meta">
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+            </section>
+            <h1 class="post-title">
+                <a href="{{url}}">{{title}}</a>
+            </h1>
+        </header>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+        
+        <section id="email-box" class="cf">
+            <hr>    
+            <p class="title">Subscribe to coderange</p>
+            <form accept-charset="UTF-8" action="#" class="new_subscription" data-remote="true" id="new_subscription" method="post">
+                
+                <div class="input_box">
+                    <input id="subscription_email" name="subscription" placeholder="What's your email?" type="email">
+                    <a href="#subscribe" class="ion-checkmark-circled"></a>    
+                </div>
+                <p class="notify">
+                    ? We hate spams as much as you do.<br>
+                    You can unsubscribe with one click.
+                </p>
+                
+            </form>
+            
+        </section>
+
+        <footer class="post-footer">
+
+        {{! Everything inside the #author tags pulls data from the author }}
+        {{#author}}
+
+            {{#if image}}
+            <figure class="author-image">
+                <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+            </figure>
+            {{/if}}
+
+            <section class="author">
+                <h4>
+                    <a href="{{url}}">{{name}}</a>
+                </h4>
+                {{#if bio}}
+                    <p>{{bio}}</p>
+                {{else}}
+                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                {{/if}}
+                <div class="author-meta">
+                    {{#if location}}<span class="ion-location author-location">{{location}}</span>{{/if}}
+                    {{#if website}}<span class="author-link ion-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                    <a class="twitterFollowBtn" href="https://twitter.com/intent/follow?screen_name=jsumeet">
+                        <i class="icon ion-social-twitter"></i>Follow @jsumeet
+                    </a>
+                </div>
+                
+            </section>
+
+        {{/author}}
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon ion-social-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon ion-social-googleplus" href="https://plus.google.com/share?url={{@blog.url}}/{{url}}"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+        </footer>
+
+    </article>
+
+</main>
+
+{{/post}}
