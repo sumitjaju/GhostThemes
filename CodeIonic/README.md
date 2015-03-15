@@ -1,6 +1,6 @@
 # Theme CodeIonic
 
-Author - [Sumit Jaju](sumitjaju.in) 
+Author - [Sumit Jaju](http://sumitjaju.in) 
 
 Theme for ghost blogging platform. [ghost.org](http://ghost.org)
 
