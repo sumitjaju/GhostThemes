@@ -4,7 +4,7 @@ Author - [Sumit Jaju](sumitjaju.in)
 
 Theme for ghost blogging platform. [ghost.org](http://ghost.org)
 
-To download, visit the [releases] [https://github.com/sumitjaju/GhostThemes/CodeIonic]
+To download, visit the [CodeIonic page] [https://github.com/sumitjaju/GhostThemes/CodeIonic]
 
 ## Copyright & License
 
