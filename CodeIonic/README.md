@@ -6,6 +6,10 @@ Theme for ghost blogging platform. [ghost.org](http://ghost.org)
 
 To download, visit the [CodeIonic page] [https://github.com/sumitjaju/GhostThemes/CodeIonic]
 
+This is how it looks.
+
+![](https://github.com/sumitjaju/GhostThemes/blob/master/CodeIonic/assets/images/codeIonicTP.png)
+
 ## Copyright & License
 
 Copyright (c) 2013-2015 Ghost Foundation - Released under the MIT License.
