@@ -1,0 +1,28 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+
+{{! Everything inside the #author tags pulls data from the author }}
+{{#author}}
+    <header class="cover">
+        <!--h1>
+            {{#if image}}
+                <img href="{{url}}" style="border-radius:100%;width:32px;height:32px" src="{{image}}"></a>
+            {{/if}}      
+        </h1-->
+        <p class="cta-sub">   
+            {{bio}} <br/>
+            {{#if location}}<span class="author-location ion-location"> {{location}}</span>{{/if}}
+            {{#if website}}<span class="author-link ion-link"><a href="{{website}}"> {{website}}</a></span>{{/if}}
+            <span class="author-stats"><i class="ion-stats-bars"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}                 </span>
+        </p>
+    
+    </header>
+    
+{{/author}}
+
+{{! The main content area on the homepage }}
+
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}

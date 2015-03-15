@@ -1,0 +1,12 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The main content area on the homepage }}
+<header class="cover">
+    <p class="cta-sub">
+        {{@blog.description}}
+    </p>
+</header>
+{{! The tag below includes the post loop - partials/loop.hbs }}
+{{> "loop"}}
+

@@ -1,0 +1,31 @@
+
+
+    <div class="postExcerpt">
+        <div class="list">
+            {{! This is the post loop - each post will be output using this markup }}
+            {{#foreach posts}}
+                <div class="item row">
+                    <div class="summary">
+                      <h3>
+                        <a href="{{url}}">{{{title}}}</a>
+                        <span class="beginner difficulty" data-placement="right" data-toggle="tooltip" title="" data-original-title="Beginner"></span>
+                      </h3>
+                      <p class="subhead">
+                        {{date format="DD MMMM YYYY"}}
+                        |
+                        {{tags prefix=" on "}}
+                      </p>
+                      <div class="description">
+                        <a href="{{url}}">  
+                            <p>{{excerpt words="26"}} &rarr;</p>         
+                        </a>    
+                      </div>
+                    </div>
+
+                </div>
+            {{/foreach}}
+        </div>
+    </div>
+
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}

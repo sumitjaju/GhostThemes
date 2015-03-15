@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" />
+    <link href="{{asset "css/ionicons.css"}}" rel="stylesheet">
+    <!--link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" type="text/css"/-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Josefin+Sans:100italic,100,300italic,300,400italic,400,600italic,600,700italic,700">
+    
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <div class="container">
+        
+        <div class="row">  
+        
+            <div class="side-nav">
+                <div class="logo">
+                    <a href="/">
+                      {{#if @blog.logo}}<img alt="Blog Logo" src="{{@blog.logo}}" > {{/if}}
+                      <span id="logoTextPart1">{{@blog.title}}</span> 
+                    </a>
+                </div>
+                <!-- These menus get rendered for desktop - start -->    
+                <nav>
+                    <ul>
+                      <li>
+                        <a href="/aboutus">
+                          <i class="icon ion-ios-people-outline"></i>
+                          <p>About Us</p>
+                        </a>
+                      </li> 
+                      <li>
+                        <a href="mailto:karma@sumitjaju.in?subject=Hello Sumit!">
+                          <i class="icon ion-ios-chatbubble-outline"></i>
+                          <p>Say Hi</p>
+                        </a>
+                      </li>    
+                      <li>
+                        <a href="/feed" target="_blank">
+                          <i class="icon ion-social-rss-outline"></i>
+                          <p>RSS</p>
+                        </a>
+                      </li>
+                    </ul>
+                    <footer>
+                      <ul>
+                        <li>
+                          <a href="https://github.com/sumitjaju" target="_blank">
+                            <i class="icon ion-social-github-outline"></i>
+                            <p>GitHub</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com/jsumeet" target="_blank">
+                            <i class="icon ion-social-twitter-outline"></i>
+                            <p>@jsumeet</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="http://sumitjaju.in" target="_blank">
+                            <i class="icon ion-social-googleplus-outline"></i>
+                            <p>sumitjaju.in</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </footer>
+                    <form action="http://codiqa.createsend.com/t/t/s/thodi/" class="email-digest" method="post">
+                      <label for="cm-thodi-thodi">
+                        <p>Sign up for the weekly Learn Digest!</p>
+                      </label>
+                      <div class="digest-wrapper">
+                        <input name="cm-thodi-thodi" placeholder="Email address" required="" type="email">
+                        <input type="submit" value="Go">
+                      </div>
+                    </form>
+                    <!-- Display success messsage after user clicks on Go button-->
+                      <div class="email-digest-success">
+                        <p>Thanks for signing up.</p>
+                      </div>
+                </nav>
+                <!-- menus ends -->
+            </div>
+            
+        </div>
+        
+        <header class="cover">
+            <div class="mobilelogo">
+                <span id="logoTextPart1">{{@blog.title}}</span> 
+                <a href="/">
+                                 
+                  {{#if @blog.logo}}<img alt="Blog Logo" src="{{@blog.logo}}" > {{/if}}
+                </a>
+                <!-- This menu gets rendered for mobile or iPad -->
+            
+                    <ul class="menuHamburger clearfix" role="navigation">
+
+                        <li class="categories dropdown">
+                            <a class="icon" data-dropdown="site-map-dropdown" data-render="renderSiteMap" href="#" title="go to another topic list or category" id="site-map">
+                                <i class="icon ion-navicon-round" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <section class="d-dropdown" id="site-map-dropdown" >
+                      <ul class="location-links">
+                        <li>
+                            <a href="/aboutus" >
+                                <i class="icon ion-ios-people-outline"></i>    
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:karma@sumitjaju.in?subject=Hello Sumit!" >    
+                              <i class="icon ion-ios-chatbubble-outline"></i> Say Hi!
+                            </a>
+                        </li>  
+                        <li>
+                            <a href="/feed" target="_blank">    
+                                <i class="icon ion-social-rss-outline"></i>RSS      
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="https://twitter.com/jsumeet" target="_blank">
+                                <i class="icon ion-social-twitter-outline"></i>    
+                                @jsumeet
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/sumitjaju" target="_blank">
+                                <i class="icon ion-social-github-outline"></i>    
+                                GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://sumitjaju.in" target="_blank">
+                                <i class="icon ion-social-googleplus-outline"></i>    
+                                sumitjaju.in
+                            </a>
+                        </li>
+
+                      </ul>
+                    </section>
+                    </ul>  
+                 <!-- menus end-->   
+                  
+        </div>
+    </header>
+        
+        
+        <div class="main-pane"> 
+            
+            {{! Everything else gets inserted here }}
+            {{{body}}}
+
+            <footer class="main">
+                <span class="attribution">© 2015</span>
+                <span class="expand-wrapper">
+                  <span id="expandor" class="expand"></span>
+                </span>
+                <nav id="nav">
+                  <a href="http://ionicframework.com" target="_blank">sumitjaju.in</a>
+                  <a href="mailto:karma@sumitjaju.in?subject=Hello Sumit!">say hi</a>
+                  <a href="https://github.com/sumitjaju" target="_blank">github</a>
+                  <a href="/feed" target="_blank">rss</a>
+                </nav>
+            </footer>
+            <span class="mobileAttribution">© 2015</span>
+         </div>
+            
+    </div>
+    
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for CodeBlue }}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</body>
+</html>

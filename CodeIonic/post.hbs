@@ -1,0 +1,46 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+              
+<div class="content">
+            <nav>
+                <a class="left" href="{{@blog.url}}">
+                    <i class="ion-chevron-left"></i>
+                    <span style="margin-left:0px;">Home</span>
+                </a> 
+            </nav>
+            <article>
+              <header>
+                <h1>{{title}}</h1>
+                <div class="byline">
+                    {{#author}}
+                        {{#if image}}
+                            <img href="{{url}}" src="{{image}}"></a>
+                        {{/if}}
+                    
+                      <span class="author">
+                        Written by
+                        <a href="{{url}}">{{name}}</a> 
+                        <a class="post-meta" >{{tags prefix=" on "}}</a>
+                      </span>
+                
+                    {{/author}}
+                 </div>
+                <div class="social-buttons">
+                    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </div>
+
+              </header>
+
+              <p class="description">{{content}}</p>
+            </article>
+            <hr/>
+          </div>              
+
+{{/post}}

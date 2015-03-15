@@ -1,0 +1,36 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+
+<div class="content">
+    <nav>
+        <a class="left" href="{{@blog.url}}">
+            <i class="ion-chevron-left"></i>
+            <span style="margin-left:0px;">Home</span>
+        </a> 
+    </nav>
+    <article>
+        <header>
+            <h1>{{title}}</h1>
+        </header>
+        <p class="description">{{content}}</p>
+        <section id=version>
+            <h5>    
+                {{@blog.title}} <span class="version">v0.1</span>
+            </h5>
+            <p>
+                {{@blog.description}}
+                <a class="twitterFollowBtn" href="https://twitter.com/intent/follow?screen_name=jsumeet">
+                    <i class="icon ion-social-twitter"></i>Follow @jsumeet
+                </a>
+            </p>
+        </section>
+        
+        
+    </article>    
+</div>
+{{/post}}
