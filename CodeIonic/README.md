@@ -1,8 +1,10 @@
-# CodeBlue
+# Theme CodeIonic
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
+Author - [Sumit Jaju](sumitjaju.in) 
 
-To download, visit the [releases](https://github.com/TryGhost/CodeBlue/releases) page.
+Theme for ghost blogging platform. [ghost.org](http://ghost.org)
+
+To download, visit the [releases] [https://github.com/sumitjaju/GhostThemes/CodeIonic]
 
 ## Copyright & License
 
