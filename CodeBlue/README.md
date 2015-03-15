@@ -7,6 +7,10 @@ Theme for ghost blogging platform. [ghost.org](http://ghost.org)
 
 To download, visit the [releases] [https://github.com/sumitjaju/GhostThemes]
 
+This is how it looks.
+
+![](https://github.com/sumitjaju/GhostThemes/blob/master/CodeBlue/assets/images/CodeBlueThemeTp.png)
+
 ## Copyright & License
 
 Copyright (c) 2013-2015 Ghost Foundation - Released under the MIT License.
