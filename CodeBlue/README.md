@@ -11,6 +11,8 @@ This is how it looks.
 
 ![](https://github.com/sumitjaju/GhostThemes/blob/master/CodeBlue/assets/images/CodeBlueThemeTp.png)
 
+Visit [my blog](http://sumitjaju.in/theme-codeblue-for-ghost) to see how to use .
+
 ## Copyright & License
 
 Copyright (c) 2013-2015 Ghost Foundation - Released under the MIT License.
