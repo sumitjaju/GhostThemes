@@ -1,10 +1,10 @@
 # Theme CodeIonic
 
-Author - [Sumit Jaju](http://sumitjaju.in) 
+Author - [Sumit Jaju](http://sumitjaju.in)
 
 Theme for ghost blogging platform. [ghost.org](http://ghost.org)
 
-To download, visit the [CodeIonic page] [https://github.com/sumitjaju/GhostThemes/CodeIonic]
+To download, visit the [CodeIonic page](https://github.com/sumitjaju/GhostThemes/CodeIonic).
 
 This is how it looks.
 
