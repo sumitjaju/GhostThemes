@@ -5,7 +5,7 @@ Author - [Sumit Jaju](http://sumitjaju.in)
 
 Theme for ghost blogging platform. [ghost.org](http://ghost.org)
 
-To download, visit the [releases] [https://github.com/sumitjaju/GhostThemes]
+To download, visit the [releases] (https://github.com/sumitjaju/GhostThemes)
 
 This is how it looks.
 
