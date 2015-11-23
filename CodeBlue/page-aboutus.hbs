@@ -9,21 +9,21 @@
 <header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
     <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
         <a class="back-button" href="{{@blog.url}}">
-            <img src="{{@blog.logo}}" width="32px" height="32px"/> 
+            <img src="{{@blog.logo}}" width="32px" height="32px"/>
         </a>
         <a class="menu-ham ion-android-menu" href="#"></a>
         <ul id="dropdown" >
-            <a class="ion-close-round" href="#"></a>    
+            <a class="ion-close-round" href="#"></a>
             <li>
                 <a href="{{@blog.url}}">{{@blog.description}}</a>
                 <span class="logotize">{{@blog.title}}</span>
             </li>
-            <li><a href="https://twitter.com/jsumeet" target="_blank">@jsumeet</a></li>
-            <li><a href="{{@blog.url}}" target="_blank">sumitjaju.in</a></li>
-            <li><a href="mailto:karma@sumitjaju.in?subject=hi Sumit!">say&nbsp;hi</a></li>
+            <li><a href="https://twitter.com/SalesLoft" target="_blank">@SalesLoft</a></li>
+            <li><a href="{{@blog.url}}" target="_blank">engineering.salesloft.com</a></li>
+            <li><a href="mailto:engineeringjobs@salesloft.com?subject=Hi SalesLoft Engineers!">say&nbsp;hi</a></li>
             <li><a href="/feed" target="_blank">rss feed</a></li>
             <li><hr class="overlord_nav"></li>
-            <li><a href="{{@blog.url}}/aboutus/">about us</a></li>
+            activity
         </ul>
         <a class="page-title-post" href="{{@blog.url}}">
             {{@blog.title}}
@@ -42,22 +42,22 @@
         <section class="post-content">
             {{content}}
         </section>
-        
+
         <section id=version>
-            <h5>    
+            <h5>
                 {{@blog.title}} <span class="version">v0.1</span>
             </h5>
             <p>
                 {{@blog.description}}
-                <a class="twitterFollowBtn" href="https://twitter.com/intent/follow?screen_name=jsumeet">
-                    <i class="icon ion-social-twitter"></i>Follow @jsumeet
+                <a class="twitterFollowBtn" href="https://twitter.com/SalesLoft">
+                    <i class="icon ion-social-twitter"></i>Follow @SalesLoft
                 </a>
             </p>
         </section>
-        
+
         <section id="email-box" class="cf">
 
-          <hr>    
+          <hr>
           <p class="title">Subscribe to coderange</p>
           <form accept-charset="UTF-8" action="#" class="new_subscription" data-remote="true" id="new_subscription" method="post">
             <div class="input_box">
@@ -70,8 +70,8 @@
             </p>
         </form>
         </section>
-        
-     </article>   
-        
+
+     </article>
+
 </main>
 {{/post}}

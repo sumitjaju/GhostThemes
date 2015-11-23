@@ -1,7 +1,7 @@
 
 # Theme CodeBlue
 
-Author - [Sumit Jaju](http://sumitjaju.in) 
+Author - [Sumit Jaju](http://engineering.salesloft.com)
 
 Theme for ghost blogging platform. [ghost.org](http://ghost.org)
 
@@ -11,7 +11,7 @@ This is how it looks.
 
 ![](https://github.com/sumitjaju/GhostThemes/blob/master/CodeBlue/assets/images/CodeBlueThemeTp.png)
 
-Visit [my blog](http://sumitjaju.in/theme-codeblue-for-ghost) to see how to use .
+Visit [my blog](http://engineering.salesloft.com/theme-codeblue-for-ghost) to see how to use .
 
 ## Copyright & License
 
